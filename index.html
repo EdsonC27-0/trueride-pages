@@ -41,9 +41,10 @@ body{background:var(--black);color:var(--white);font-family:var(--fb);line-heigh
 
 /* =================== PAGE 1 =================== */
 .p1-grid{flex:1;display:grid;grid-template-columns:1.05fr 1fr;gap:24px;align-items:center;padding:18px 26px 0}
-.hook-eyebrow{font-family:var(--fc);font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:10px;line-height:1.3}
-.hook-eyebrow::before{content:"";width:28px;height:1px;background:var(--gold);flex-shrink:0}
-.hook{font-family:var(--fd);font-size:clamp(46px,8.5vw,86px);line-height:.9;letter-spacing:.015em}
+.hero-sup{font-family:var(--fc);font-size:clamp(12px,1.4vw,15px);font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.hero-sup::before{content:"";width:28px;height:1px;background:var(--gold);flex-shrink:0}
+.hero-main{font-family:var(--fd);font-size:clamp(40px,6.8vw,84px);line-height:.9;letter-spacing:.01em;color:var(--white);margin-bottom:24px}
+.hook{font-family:var(--fd);font-size:clamp(26px,4.4vw,52px);line-height:.9;letter-spacing:.015em;border-left:3px solid rgba(232,163,32,0.55);padding-left:16px;opacity:.88}
 .hook .g{color:var(--gold);font-family:var(--fb);font-weight:700;font-style:italic}
 .hook-sub{font-family:var(--fc);font-size:clamp(15px,1.7vw,19px);font-weight:300;color:var(--wdim);max-width:400px;line-height:1.5;margin-top:20px}
 
@@ -70,66 +71,89 @@ body{background:var(--black);color:var(--white);font-family:var(--fb);line-heigh
 .ps-tabs div{flex:1;text-align:center;padding:8px 0;font-family:var(--fc);font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.35)}
 .ps-tabs div.on{color:var(--gold)}
 
-.confidence{text-align:center;padding:24px 26px 0;margin-top:8px}
-.confidence p{font-family:var(--fd);font-size:clamp(28px,4.6vw,48px);line-height:1;letter-spacing:.01em}
+.confidence{padding:20px 26px;border-top:1px solid rgba(232,163,32,0.18);border-bottom:1px solid rgba(232,163,32,0.18);background:rgba(232,163,32,0.035);overflow:hidden;margin-top:8px}
+.confidence p{font-family:var(--fd);font-size:clamp(22px,3.4vw,44px);line-height:1;letter-spacing:.025em;white-space:nowrap;text-align:center}
 .confidence p .g{color:var(--gold)}
 
-.pillars{margin-top:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(232,163,32,0.12);border-top:1px solid rgba(232,163,32,0.2)}
-.pillar{background:var(--dark);padding:16px 8px;text-align:center}
-.pillar-k{font-family:var(--fc);font-size:clamp(11px,1.5vw,14px);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
-.pillar-s{font-size:9px;color:var(--wdim);margin-top:3px;font-weight:300;line-height:1.3}
+.pillars{margin-top:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(232,163,32,0.15)}
+.pillar{background:transparent;padding:30px 14px 26px;text-align:center;border-right:1px solid rgba(232,163,32,0.1);transition:background .35s cubic-bezier(0.32,0.72,0,1)}
+.pillar:last-child{border-right:none}
+.pillar:hover{background:rgba(232,163,32,0.04)}
+.pillar-icon{width:46px;height:46px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1.5px solid rgba(232,163,32,0.35);color:var(--gold);transition:border-color .35s cubic-bezier(0.32,0.72,0,1),background .35s cubic-bezier(0.32,0.72,0,1)}
+.pillar:hover .pillar-icon{border-color:var(--gold);background:rgba(232,163,32,0.08)}
+.pillar-k{font-family:var(--fc);font-size:clamp(12px,1.6vw,15px);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.pillar-s{font-size:11px;color:var(--wdim);margin-top:6px;font-weight:300;line-height:1.45}
 
 .scroll-cue{text-align:center;padding:22px 0 4px;font-family:var(--fc);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(232,163,32,0.5);animation:bob 2.4s infinite}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 
 /* =================== PAGE 2 — OFFER =================== */
 #p2{justify-content:flex-start}
-.p2-head{padding:18px 26px 0}
-.p2-eyebrow{font-family:var(--fc);font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.p2-head{padding:28px 26px 0;text-align:center;width:100%}
+.p2-eyebrow{font-family:var(--fc);font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;justify-content:center;gap:10px}
 .p2-eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
-.p2-title{font-family:var(--fd);font-size:clamp(38px,5.4vw,68px);line-height:.93}
+.p2-title{font-family:var(--fd);font-size:clamp(44px,7vw,88px);line-height:.9;text-align:center}
 .p2-title .g{color:var(--gold)}
-.p2-lead{font-family:var(--fc);font-size:clamp(15px,1.8vw,20px);font-weight:300;color:var(--wdim);max-width:580px;margin-top:14px;line-height:1.45}
-.p2-lead strong{color:var(--white);font-weight:500}
+.p2-lead{font-family:var(--fc);font-size:clamp(18px,2.4vw,27px);font-weight:300;color:var(--wdim);max-width:740px;margin:22px auto 0;line-height:1.5;text-align:center}
+.p2-lead strong{color:var(--white);font-weight:600}
 
-.offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin:22px 26px 0}
-.oc{background:var(--dark2);border:1px solid rgba(232,163,32,0.12);border-top:3px solid var(--gold);padding:20px 18px}
-.oc-k{font-family:var(--fc);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
-.oc-h{font-family:var(--fc);font-size:18px;font-weight:700;color:var(--white);margin-bottom:7px;line-height:1.15}
-.oc-d{font-size:12.5px;font-weight:300;color:var(--wdim);line-height:1.55}
+.offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:40px 0 0;border-top:1px solid rgba(232,163,32,0.12)}
+.oc{background:transparent;border:none;border-bottom:1px solid rgba(232,163,32,0.08);border-right:1px solid rgba(232,163,32,0.08);padding:36px 40px;transition:background .35s cubic-bezier(0.32,0.72,0,1)}
+.oc:hover{background:rgba(232,163,32,0.03)}
+.oc:nth-child(even){border-right:none}
+.oc:nth-last-child(-n+2){border-bottom:none}
+.oc-k{font-family:var(--fc);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.oc-h{font-family:var(--fc);font-size:clamp(16px,1.8vw,21px);font-weight:700;color:var(--white);margin-bottom:10px;line-height:1.15}
+.oc-d{font-size:13.5px;font-weight:300;color:var(--wdim);line-height:1.65}
 
-.offer-foot{margin:24px 26px 0}
-.offer-strap{font-family:var(--fd);font-size:clamp(24px,3.6vw,36px);line-height:1.02;margin-bottom:16px}
+.offer-foot{margin:48px 0 0;width:100%;text-align:center;padding:0 26px}
+.offer-strap{font-family:var(--fd);font-size:clamp(38px,6vw,70px);line-height:.92;margin-bottom:28px;letter-spacing:.01em;text-align:center}
 .offer-strap .g{color:var(--gold)}
-.cta-row{display:flex;flex-direction:column;gap:10px;max-width:520px}
-.cta{display:flex;align-items:center;justify-content:space-between;padding:15px 20px;text-decoration:none;border:1px solid var(--wfaint);transition:all .25s}
+.cta-row{display:flex;flex-direction:column;gap:12px;max-width:520px;margin:0 auto}
+.cta{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;text-decoration:none;border:1px solid var(--wfaint);transition:all .4s cubic-bezier(0.32,0.72,0,1)}
 .cta-main{background:var(--gold);border-color:var(--gold)}
 .cta-main .cta-t{color:#0A0A08;font-weight:700}.cta-main .cta-a{color:#0A0A08}
-.cta-main:hover{background:var(--gold-light);transform:translateX(4px)}
-.cta-ghost{background:var(--dark2)}
-.cta-ghost:hover{border-color:var(--gold);transform:translateX(4px)}
-.cta-t{font-family:var(--fc);font-size:16px;font-weight:600;letter-spacing:.03em;color:var(--white)}
-.cta-sub{display:block;font-family:var(--fc);font-size:11px;font-weight:300;color:var(--wdim);letter-spacing:0}
+.cta-main:hover{background:var(--gold-light);transform:translateX(6px)}
+.cta-ghost{background:rgba(26,26,21,0.7);border-color:rgba(232,163,32,0.25)}
+.cta-ghost:hover{border-color:var(--gold);transform:translateX(6px);background:rgba(232,163,32,0.06)}
+.cta-t{font-family:var(--fc);font-size:17px;font-weight:600;letter-spacing:.03em;color:var(--white)}
+.cta-sub{display:block;font-family:var(--fc);font-size:12px;font-weight:300;color:var(--wdim);letter-spacing:0;margin-top:2px}
 .cta-main .cta-sub{color:rgba(10,10,8,0.65)}
-.cta-a{font-size:18px;color:var(--gold)}
+.cta-a{font-size:20px;color:var(--gold);transition:transform .3s cubic-bezier(0.32,0.72,0,1)}
+.cta:hover .cta-a{transform:translateX(4px)}
 
-.p2-sign{margin:22px 26px 0;font-family:var(--fc);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(232,163,32,0.55)}
+.p2-sign{margin:24px 0 0;width:100%;font-family:var(--fc);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(232,163,32,0.55);text-align:center}
 
 .prog{position:fixed;top:0;left:0;height:3px;background:var(--gold);width:0;z-index:100;transition:width .15s linear}
 .dots{position:fixed;right:14px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:11px;z-index:90}
 .dots a{width:8px;height:8px;border-radius:50%;border:1px solid rgba(232,163,32,0.5);transition:all .3s;display:block}
 .dots a.on{background:var(--gold);border-color:var(--gold);transform:scale(1.3)}
 
+/* Scroll reveal — elements fade + rise into view */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .75s cubic-bezier(0.32,0.72,0,1),transform .75s cubic-bezier(0.32,0.72,0,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
 @media(max-width:640px){
   .p1-grid{grid-template-columns:1fr;gap:18px;padding-top:10px}
-  .hook{font-size:clamp(48px,15vw,76px);order:1}
+  .hero-main{font-size:clamp(34px,13vw,62px);margin-bottom:16px}
+  .hook{font-size:clamp(22px,10vw,44px);order:3;border-left-width:2px;padding-left:10px}
+  .hero-sup{order:0}
+  .hook-sub{display:none}
   .phone-col{order:2}
   .phone{width:min(236px,66vw)}
-  .hook-sub{display:none}
+  .confidence p{white-space:normal;font-size:clamp(20px,7vw,34px);text-align:center;line-height:1.05}
+  .pillars{grid-template-columns:repeat(2,1fr)}
+  .pillar:nth-child(2){border-right:none}
+  .pillar:nth-child(3){border-right:1px solid rgba(232,163,32,0.1);border-top:1px solid rgba(232,163,32,0.1)}
+  .pillar:nth-child(4){border-top:1px solid rgba(232,163,32,0.1)}
   .offer-grid{grid-template-columns:1fr}
+  .oc:nth-child(even){border-right:none}
+  .oc:nth-last-child(-n+2){border-bottom:1px solid rgba(232,163,32,0.08)}
+  .oc:last-child{border-bottom:none}
+  .oc{padding:24px 22px}
+  .offer-foot{padding:0 20px}
   .dots{display:none}
   .topbar{padding:14px 16px 0}
-  .pillars{grid-template-columns:repeat(2,1fr)}
 }
 @media(min-width:641px){
   .page{min-height:100vh}
@@ -156,9 +180,10 @@ body{background:var(--black);color:var(--white);font-family:var(--fb);line-heigh
 
   <div class="p1-grid">
     <div class="hook-col">
-      <div class="hook-eyebrow">South Africa's Video-First Marketplace</div>
-      <div class="hook">Where<br>attention<br>goes,<br><span class="g">money</span><br>follows.</div>
-      <div class="hook-sub">The car marketplace hasn't changed in a decade — but your buyer has. This is the playbook for catching up, and the offer to do it with us.</div>
+      <div class="hero-sup reveal">South Africa's First</div>
+      <div class="hero-main reveal">Video-First Car<br>Marketplace</div>
+      <div class="hook reveal">Where<br>attention<br>goes,<br><span class="g">money</span><br>follows.</div>
+      <div class="hook-sub reveal">The car marketplace hasn't changed in a decade — but your buyer has. This is the playbook for catching up, and the offer to do it with us.</div>
     </div>
     <div class="phone-col">
       <div class="phone">
@@ -187,17 +212,33 @@ body{background:var(--black);color:var(--white);font-family:var(--fb);line-heigh
     </div>
   </div>
 
-  <div class="confidence">
-    <p>People don't buy cars.<br>They buy <span class="g">confidence.</span></p>
+  <div class="confidence reveal">
+    <p>People don't buy cars &mdash; they buy <span class="g">confidence.</span></p>
   </div>
 
   <div class="scroll-cue">Scroll &#8595;</div>
 
-  <div class="pillars">
-    <div class="pillar"><div class="pillar-k">Video</div><div class="pillar-s">See the truth first</div></div>
-    <div class="pillar"><div class="pillar-k">Trust</div><div class="pillar-s">Verified, always</div></div>
-    <div class="pillar"><div class="pillar-k">Distribution</div><div class="pillar-s">Meet buyers where they are</div></div>
-    <div class="pillar"><div class="pillar-k">Authenticity</div><div class="pillar-s">Real cars, real people</div></div>
+  <div class="pillars reveal">
+    <div class="pillar">
+      <div class="pillar-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+      <div class="pillar-k">Video</div>
+      <div class="pillar-s">See the truth first</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+      <div class="pillar-k">Trust</div>
+      <div class="pillar-s">Verified, always</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
+      <div class="pillar-k">Distribution</div>
+      <div class="pillar-s">Meet buyers where they are</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <div class="pillar-k">Authenticity</div>
+      <div class="pillar-s">Real cars, real people</div>
+    </div>
   </div>
 </section>
 
@@ -228,9 +269,9 @@ body{background:var(--black);color:var(--white);font-family:var(--fb);line-heigh
       <div class="oc-d">Old platforms make every dealer look identical. TrueRide gives your dealership a video-first identity that's impossible to confuse — and impossible to ignore.</div>
     </div>
     <div class="oc">
-      <div class="oc-k">Authentication</div>
-      <div class="oc-h">Verified or it doesn't post.</div>
-      <div class="oc-d">Every seller KYC-verified. Every car on real video. The scam-and-ghost era ends here — buyers arrive already believing what they see.</div>
+      <div class="oc-k">Distribution</div>
+      <div class="oc-h">Our platform does the heavy lifting.</div>
+      <div class="oc-d">Direct CTAs, built-in sharing, and reach across every channel — so you focus on conversations, not logistics. We create the efficiency; you capture the sale.</div>
     </div>
     <div class="oc">
       <div class="oc-k">Trust &amp; Rapport</div>
@@ -239,18 +280,18 @@ body{background:var(--black);color:var(--white);font-family:var(--fb);line-heigh
     </div>
   </div>
 
-  <div class="offer-foot">
+  <div class="offer-foot reveal">
     <div class="offer-strap">Be first.<br>Be <span class="g">founding.</span></div>
     <div class="cta-row">
-      <a href="#" class="cta cta-main" data-cta="call">
+      <a href="waitlist/" class="cta cta-main" data-cta="call">
         <span><span class="cta-t">Book a 15-minute founding call</span><span class="cta-sub">No pressure. If it's not a fit, we'll tell you.</span></span>
         <span class="cta-a">&#8594;</span>
       </a>
-      <a href="https://trueride-pages.vercel.app/waitlist/" class="cta cta-ghost" data-cta="waitlist">
+      <a href="waitlist/" class="cta cta-ghost" data-cta="waitlist">
         <span><span class="cta-t">Join the dealer waitlist</span><span class="cta-sub">Get the full picture before you commit.</span></span>
         <span class="cta-a">&#8594;</span>
       </a>
-      <a href="https://trueride-pages.vercel.app/showroom/" class="cta cta-ghost" data-cta="deck">
+      <a href="showroom/" class="cta cta-ghost" data-cta="deck">
         <span><span class="cta-t">Request the full deck</span><span class="cta-sub">The complete platform, model &amp; roadmap.</span></span>
         <span class="cta-a">&#8594;</span>
       </a>
@@ -286,6 +327,20 @@ function updateDots(){
 }
 window.addEventListener("scroll",()=>{ if(!ticking){requestAnimationFrame(updateDots);ticking=true;} },{passive:true});
 updateDots();
+
+// Scroll reveal — fire immediately for above-fold, then watch the rest.
+const revealObs=new IntersectionObserver((entries)=>{
+  entries.forEach((e,i)=>{
+    if(e.isIntersecting){
+      // Stagger siblings within the same parent slightly for depth.
+      const siblings=[...e.target.parentElement.querySelectorAll(".reveal")];
+      const delay=siblings.indexOf(e.target)*80;
+      setTimeout(()=>e.target.classList.add("visible"),delay);
+      revealObs.unobserve(e.target);
+    }
+  });
+},{threshold:0.12});
+document.querySelectorAll(".reveal").forEach(el=>revealObs.observe(el));
 </script>
 </body>
 </html>
