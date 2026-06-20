@@ -428,6 +428,9 @@ function setMode(mode){
   }
 }
 
+const requestedMode=new URLSearchParams(window.location.search).get('type');
+if(requestedMode==='seller'||requestedMode==='dealer')setMode('seller');
+
 function handleSubmit(e){
   e.preventDefault();
   // ============================================================
